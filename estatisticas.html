@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatísticas - FeedISPT</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="estatisticas-page">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/ispt.png" alt="Logo ISPT" class="logo-img">
+                <h1>FeedISPT</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="avaliacoes.html"><i class="fas fa-clipboard-check"></i> Avaliações</a></li>
+                    <li><a href="estatisticas.html" class="active"><i class="fas fa-chart-pie"></i> Estatísticas</a></li>
+                    <li><a href="contato.html"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <div class="container">
+            <h2><i class="fas fa-chart-line"></i> Estatísticas de Avaliações</h2>
+            <p>Visualize as tendências de avaliações e descobra insights valiosos.</p>
+        </div>
+    </div>
+
+    <main>
+        <section class="statistics-intro">
+            <div class="container">
+                <div class="intro-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt fa-3x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Visualização de Dados Anônimos</h3>
+                        <p>Todas as estatísticas apresentadas são baseadas em dados agregados, sem possibilidade de identificação individual. Garantimos a confidencialidade de todas as avaliações.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="statistics-filter">
+            <div class="container">
+                <div class="filter-card">
+                    <div class="filter-header">
+                        <h3><i class="fas fa-filter"></i> Filtrar Estatísticas</h3>
+                        <p>Personalize sua visualização selecionando os filtros abaixo</p>
+                    </div>
+                    <form id="filter-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="filter-course"><i class="fas fa-book"></i> Filtrar por Disciplina:</label>
+                                <div class="select-wrapper">
+                                    <select id="filter-course" name="filter-course">
+                                        <option value="">Todas as Disciplinas</option>
+                                        <option value="matematica">Matemática</option>
+                                        <option value="programacao">Programação</option>
+                                        <option value="fisica">Física</option>
+                                        <option value="quimica">Química</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="filter-professor"><i class="fas fa-chalkboard-teacher"></i> Filtrar por Docente:</label>
+                                <div class="select-wrapper">
+                                    <select id="filter-professor" name="filter-professor">
+                                        <option value="">Todos os Docentes</option>
+                                        <!-- Será carregado dinamicamente com JavaScript -->
+                                    </select>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group period-filter">
+                                <label for="filter-period"><i class="fas fa-calendar-alt"></i> Período:</label>
+                                <div class="select-wrapper">
+                                    <select id="filter-period" name="filter-period">
+                                        <option value="current">Semestre Atual</option>
+                                        <option value="last">Último Semestre</option>
+                                        <option value="year">Último Ano</option>
+                                        <option value="all">Todos os Períodos</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary"><i class="fas fa-search"></i> Aplicar Filtros</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-summary">
+            <div class="container">
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="summary-data">
+                            <h3>423</h3>
+                            <p>Avaliações Realizadas</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="summary-data">
+                            <h3>4.2</h3>
+                            <p>Média Geral</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="summary-data">
+                            <h3>12</h3>
+                            <p>Disciplinas Avaliadas</p>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="summary-data">
+                            <h3>18</h3>
+                            <p>Docentes Avaliados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="statistics-charts">
+            <div class="container">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3><i class="fas fa-book-open"></i> Avaliação de Conteúdo Didático</h3>
+                        <div class="chart-controls">
+                            <button class="chart-btn active" data-chart="bar"><i class="fas fa-chart-bar"></i></button>
+                            <button class="chart-btn" data-chart="pie"><i class="fas fa-chart-pie"></i></button>
+                        </div>
+                    </div>
+                    <div class="chart" id="didactic-chart">
+                        <!-- Aqui será renderizado o gráfico com JavaScript -->
+                        <div class="chart-placeholder">
+                            <div class="bar-chart">
+                                <div class="bar" style="height: 60%;" data-value="4.2">
+                                    <span class="bar-label">Material</span>
+                                </div>
+                                <div class="bar" style="height: 75%;" data-value="4.7">
+                                    <span class="bar-label">Clareza</span>
+                                </div>
+                                <div class="bar" style="height: 50%;" data-value="3.8">
+                                    <span class="bar-label">Organização</span>
+                                </div>
+                                <div class="bar" style="height: 68%;" data-value="4.4">
+                                    <span class="bar-label">Relevância</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: var(--primary-color);"></span>
+                            <span class="legend-text">Média das avaliações (escala 1-5)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3><i class="fas fa-tasks"></i> Avaliação de Metodologia</h3>
+                        <div class="chart-controls">
+                            <button class="chart-btn active" data-chart="bar"><i class="fas fa-chart-bar"></i></button>
+                            <button class="chart-btn" data-chart="pie"><i class="fas fa-chart-pie"></i></button>
+                        </div>
+                    </div>
+                    <div class="chart" id="methodology-chart">
+                        <!-- Aqui será renderizado o gráfico com JavaScript -->
+                        <div class="chart-placeholder">
+                            <div class="bar-chart">
+                                <div class="bar" style="height: 70%;" data-value="4.5">
+                                    <span class="bar-label">Abordagem</span>
+                                </div>
+                                <div class="bar" style="height: 65%;" data-value="4.3">
+                                    <span class="bar-label">Interação</span>
+                                </div>
+                                <div class="bar" style="height: 55%;" data-value="4.0">
+                                    <span class="bar-label">Feedback</span>
+                                </div>
+                                <div class="bar" style="height: 72%;" data-value="4.6">
+                                    <span class="bar-label">Disponibilidade</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: var(--primary-color);"></span>
+                            <span class="legend-text">Média das avaliações (escala 1-5)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feedback-summary">
+            <div class="container">
+                <div class="summary-header">
+                    <h3><i class="fas fa-comment-dots"></i> Principais Sugestões</h3>
+                    <p>As sugestões mais frequentes mencionadas nas avaliações</p>
+                </div>
+                <div class="suggestions-cloud">
+                    <span class="tag-1">Mais exercícios práticos</span>
+                    <span class="tag-2">Melhorar slides</span>
+                    <span class="tag-3">Exemplos do cotidiano</span>
+                    <span class="tag-2">Mais feedback</span>
+                    <span class="tag-1">Aulas gravadas</span>
+                    <span class="tag-3">Menos teoria</span>
+                    <span class="tag-2">Exercícios mais desafiadores</span>
+                    <span class="tag-3">Horário flexível</span>
+                    <span class="tag-1">Material complementar</span>
+                    <span class="tag-2">Acompanhamento individual</span>
+                </div>
+                <div class="feedback-insight">
+                    <div class="insight-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="insight-content">
+                        <h4>Insight Principal</h4>
+                        <p>Os alunos estão solicitando mais atividades práticas e exemplos aplicados ao cotidiano, indicando uma demanda por aprendizado mais prático e conectado com a realidade profissional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="improvement-actions">
+            <div class="container">
+                <div class="action-header">
+                    <h3><i class="fas fa-rocket"></i> Ações de Melhoria em Andamento</h3>
+                    <p>Com base nas avaliações, as seguintes iniciativas estão sendo implementadas:</p>
+                </div>
+                <div class="action-items">
+                    <div class="action-item">
+                        <div class="action-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="action-content">
+                            <h4>Gravação de Aulas</h4>
+                            <p>A partir do próximo semestre, todas as aulas serão gravadas e disponibilizadas na plataforma de ensino.</p>
+                        </div>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="action-content">
+                            <h4>Monitoria Expandida</h4>
+                            <p>Aumento no número de monitores para oferecer mais suporte individualizado aos alunos.</p>
+                        </div>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="action-content">
+                            <h4>Laboratórios Práticos</h4>
+                            <p>Novas sessões de laboratório serão adicionadas para aumentar as oportunidades de prática.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/ispt-transparente.svg" alt="Logo ISPT" class="logo-img">
+                    <h2>FeedISPT</h2>
+                    <p>Sistema de Avaliação Docente e Disciplinar Online</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="avaliacoes.html">Avaliações</a></li>
+                        <li><a href="estatisticas.html">Estatísticas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> feedback@ispt.edu</p>
+                    <p><i class="fas fa-phone"></i> 847385</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FeedISPT - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - FeedISPT</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="contato-page">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/ispt.png" alt="Logo ISPT" class="logo-img">
+                <h1>FeedISPT</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="avaliacoes.html"><i class="fas fa-clipboard-check"></i> Avaliações</a></li>
+                    <li><a href="estatisticas.html"><i class="fas fa-chart-pie"></i> Estatísticas</a></li>
+                    <li><a href="contato.html" class="active"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <div class="container">
+            <h2><i class="fas fa-headset"></i> Entre em Contato</h2>
+            <p>Estamos à disposição para ouvir suas dúvidas, sugestões e feedback sobre o sistema.</p>
+        </div>
+    </div>
+
+    <main>
+        <section class="contact-intro">
+            <div class="container">
+                <div class="intro-card">
+                    <div class="card-icon">
+                        <i class="fas fa-comments fa-3x"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Sua Opinião é Importante</h3>
+                        <p>Valorizamos seu feedback para continuamente melhorarmos o sistema de avaliação. Utilize os canais abaixo para entrar em contato com nossa equipe.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-methods">
+            <div class="container">
+                <div class="methods-grid">
+                    <div class="method-card">
+                        <div class="method-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>feedback@ispt.edu</p>
+                        <p class="method-desc">Para dúvidas e sugestões</p>
+                        <a href="mailto:feedback@ispt.edu" class="btn-primary"><i class="fas fa-paper-plane"></i> Enviar Email</a>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Telefone</h3>
+                        <p>847385</p>
+                        <p class="method-desc">Segunda a Sexta, 8:00-17:00</p>
+                        <a href="tel:847385" class="btn-primary"><i class="fas fa-phone"></i> Ligar Agora</a>
+                    </div>
+                    <div class="method-card">
+                        <div class="method-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Chat Online</h3>
+                        <p>Suporte em tempo real</p>
+                        <p class="method-desc">Disponível em horário comercial</p>
+                        <button class="btn-primary"><i class="fas fa-comment-dots"></i> Iniciar Chat</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <div class="container">
+                <div class="form-card">
+                    <div class="form-header">
+                        <h3><i class="fas fa-paper-plane"></i> Formulário de Contato</h3>
+                        <p>Preencha o formulário abaixo e retornaremos o mais breve possível</p>
+                    </div>
+                    
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Nome (opcional):</label>
+                                <input type="text" id="name" name="name" placeholder="Seu nome">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email: <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Assunto: <span class="required">*</span></label>
+                            <div class="select-wrapper">
+                                <select id="subject" name="subject" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="duvida">Dúvida sobre o sistema</option>
+                                    <option value="sugestao">Sugestão de melhoria</option>
+                                    <option value="problema">Reportar um problema</option>
+                                    <option value="outro">Outro assunto</option>
+                                </select>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Mensagem: <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="subscribe" name="subscribe">
+                            <label for="subscribe">Receber atualizações sobre o sistema por email</label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="reset" class="btn-secondary"><i class="fas fa-undo"></i> Limpar</button>
+                            <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Enviar Mensagem</button>
+                        </div>
+                        
+                        <div class="form-notice">
+                            <p><i class="fas fa-shield-alt"></i> Seus dados estão protegidos de acordo com nossa <a href="#">política de privacidade</a>.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="info-header">
+                    <h3><i class="fas fa-map-marker-alt"></i> Onde Estamos</h3>
+                </div>
+                <div class="info-content">
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <!-- Aqui seria inserido um mapa do Google Maps ou similar -->
+                            <div class="map-overlay">
+                                <i class="fas fa-map-marked-alt fa-3x"></i>
+                                <p>Mapa Interativo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-pin"></i>
+                            </div>
+                            <h4>Endereço</h4>
+                            <p>Av. Exemplo, 1234<br>Bairro, Cidade<br>CEP: 12345-678</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta:<br>08:00 - 17:00</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-subway"></i>
+                            </div>
+                            <h4>Como Chegar</h4>
+                            <p>Estação de Metrô: Central<br>Linhas de Ônibus: 123, 456, 789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-header">
+                    <h3><i class="fas fa-question-circle"></i> Perguntas Frequentes</h3>
+                    <p>Encontre respostas para as dúvidas mais comuns</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4><i class="fas fa-question"></i> Como minhas avaliações são mantidas anônimas?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Todas as avaliações são desvinculadas de dados pessoais antes de serem armazenadas. Os professores e administradores têm acesso apenas aos dados agregados, sem qualquer identificação individual.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4><i class="fas fa-question"></i> Posso editar uma avaliação que já enviei?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim, você pode editar suas avaliações até o final do período de avaliação. Após esse período, as avaliações são finalizada e não podem mais ser modificadas.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4><i class="fas fa-question"></i> Como as avaliações são utilizadas pela instituição?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>As avaliações são analisadas pela coordenação acadêmica para identificar pontos fortes e oportunidades de melhoria nos cursos e na metodologia dos professores. Elas são fundamentais para o planejamento de ações de aprimoramento contínuo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/ispt-transparente.svg" alt="Logo ISPT" class="logo-img">
+                    <h2>FeedISPT</h2>
+                    <p>Sistema de Avaliação Docente e Disciplinar Online</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="avaliacoes.html">Avaliações</a></li>
+                        <li><a href="estatisticas.html">Estatísticas</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> feedback@ispt.edu</p>
+                    <p><i class="fas fa-phone"></i> 847385</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FeedISPT - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

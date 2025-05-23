@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Converter SVG para PNG Transparente</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: white; /* Pode ser alterado para testar a transparência */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        img {
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        canvas {
+            border: 1px solid #ccc;
+            background-color: transparent;
+        }
+        
+        p {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>Converter SVG para PNG com fundo transparente</h2>
+    
+    <img id="svgImage" src="ispt-transparente.svg" alt="Logo ISPT">
+    
+    <canvas id="canvas" width="400" height="220"></canvas>
+    
+    <p>Para salvar: Clique com o botão direito na imagem abaixo e selecione "Salvar imagem como..."</p>
+    
+    <script>
+        // Aguarda o carregamento completo do documento
+        document.addEventListener('DOMContentLoaded', function() {
+            // Referências aos elementos
+            const svgImage = document.getElementById('svgImage');
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Função para converter SVG para PNG transparente
+            function convertToPNG() {
+                // Limpa o canvas com fundo transparente
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Desenha a imagem SVG no canvas mantendo a transparência
+                ctx.drawImage(svgImage, 0, 0, canvas.width, canvas.height);
+                
+                // Exibe a imagem resultante
+                const pngURL = canvas.toDataURL('image/png');
+                const resultImage = new Image();
+                resultImage.src = pngURL;
+                resultImage.alt = 'Logo ISPT PNG Transparente';
+                resultImage.style.maxWidth = '400px';
+                document.body.appendChild(resultImage);
+            }
+            
+            // Aguarda o carregamento da imagem SVG
+            svgImage.onload = convertToPNG;
+            
+            // Se a imagem já estiver carregada
+            if (svgImage.complete) {
+                convertToPNG();
+            }
+        });
+    </script>
+</body>
+</html> 

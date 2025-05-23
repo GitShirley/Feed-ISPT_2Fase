@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <!-- Fundo transparente por padrão -->
+  
+  <!-- Texto ISPT -->
+  <path d="M72 80 L72 20 L110 20 M72 50 L110 50 M180 20 L135 20 L135 80 L180 80 M235 20 L210 20 L210 80 L235 80 M270 20 L270 80 L320 80 M270 20 L320 20 M270 50 L300 50 M375 20 L325 20 L325 80 L375 80" fill="#231f20" stroke="#231f20" stroke-width="3"/>
+  
+  <!-- Raios vermelhos -->
+  <path d="M200 180 L190 130 M215 175 L210 130 M235 170 L230 130 M250 160 L255 130 M270 150 L275 130" stroke="#e53935" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Sol amarelo -->
+  <circle cx="210" cy="130" r="18" fill="#ffeb3b" stroke="#fbc02d" stroke-width="2"/>
+  
+  <!-- Livro / Ondas verdes -->
+  <path d="M80 160 C130 110, 290 110, 340 160 C290 130, 130 130, 80 160 Z" fill="#008a45" stroke="#006834" stroke-width="1.5"/>
+  
+  <!-- Texto "INSTITUTO SUPERIOR POLITÉCNICO" -->
+  <text x="210" y="195" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" font-weight="bold" fill="#231f20">INSTITUTO SUPERIOR POLITÉCNICO</text>
+  
+  <!-- Texto "DE TETE" -->
+  <text x="210" y="215" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" font-weight="bold" fill="#231f20">DE TETE</text>
+</svg> 
